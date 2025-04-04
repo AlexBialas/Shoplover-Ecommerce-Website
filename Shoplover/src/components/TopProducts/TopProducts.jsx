@@ -55,26 +55,26 @@ const TopProducts = () => {
         </p>
       </div>
       {/* Body section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-center justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-center justify-items-center ">
         {ProductsData.map((data) => (
           <div
             key={data.id}
             className="rounded-2xl bg-white hover:bg-black/80 hover:text-white relative shadow-xl duration-300 p-4  h-[350px] mb-20"
           >
-            {/* Zgrupowana sekcja dla obrazu i szczegółów */}
-            <div className="flex flex-col justify-center items-center  ">
+            <div className="flex flex-col justify-center items-center   ">
               {/* Image section */}
-              <div className="mb-2 flex justify-center items-center">
+              <div className="mb-2 flex justify-center items-center ">
                 <img
                   src={data.img}
                   alt={data.title || "Product image"} // Fallback alt text
                   className="w-[240px] h-[300px] block mx-auto transform -translate-y-30 group-hover:scale-105 duration-300 drop-shadow-md"
                 />
               </div>
-              {/* Details section - cała zawartość w hover */}
-              <div className="flex flex-col items-center transform -translate-y-30">
+              <div className="flex flex-col items-center transform -translate-y-30 ">
                 <h2 className="text-lg font-semibold">{data.title}</h2>
-                <p className="text-gray-600">{data.description}</p>
+                <p className="text-gray-600  hover:text-white">
+                  {data.description}
+                </p>
                 <div className="flex items-center mt-1">
                   {[...Array(5)].map((_, index) => (
                     <FaStar
