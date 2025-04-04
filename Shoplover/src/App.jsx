@@ -3,8 +3,20 @@ import Nav from "../src/components/Nav/Nav";
 import Hero from "../src/components/Hero/Hero";
 import Products from "./components/Products/Products";
 import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Nav />
@@ -12,6 +24,6 @@ function App() {
       <Products />
     </>
   );
-}
+};
 
 export default App;
