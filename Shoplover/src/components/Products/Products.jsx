@@ -11,49 +11,49 @@ const ProductsData = [
   {
     id: 1,
     img: Img1,
-    title: "Women Ethnic",
+    title: "Women's Tshirt 1",
     rating: 5.0,
-    author: "white",
+    author: "Brown",
     aosDelay: "0",
   },
   {
     id: 2,
     img: Img2,
-    title: "Women Western",
+    title: "Women's Tshirt 2",
     rating: 4.7,
-    author: "red",
+    author: "Red",
     aosDelay: "200",
   },
   {
     id: 3,
     img: Img3,
-    title: "Women Goggles",
+    title: "Women's Tshirt 3",
     rating: 4.3,
-    author: "brown",
+    author: "Black",
     aosDelay: "400",
   },
   {
     id: 4,
     img: Img4,
-    title: "Women Shorts",
+    title: "Women's Tshirt 4",
     rating: 4.0,
-    author: "green",
+    author: "Blue",
     aosDelay: "600",
   },
   {
     id: 5,
     img: Img5,
-    title: "Man Ethnic",
+    title: "Women's Tshirt 5",
     rating: 5.0,
-    author: "orange",
+    author: "White",
     aosDelay: "800",
   },
   {
     id: 6,
     img: Img6,
-    title: "Man Goggles",
+    title: "Women's Tshirt 6",
     rating: 4.1,
-    author: "yellow",
+    author: "Dark blue",
     aosDelay: "1000",
   },
 ];
@@ -65,11 +65,13 @@ const Products = () => {
         {" "}
         {/* Header section */}
         <div className="text-center mb-10">
-          <p className="text-sm text-orange-500">
+          <p data-aos="fade-up" className="text-sm text-orange-500">
             Top Selling Products for you
           </p>
-          <h1 className="text-3xl font-bold">Products</h1>
-          <p className="text-xs text-gray-400">
+          <h1 data-aos="fade-up" className="text-3xl font-bold">
+            Products
+          </h1>
+          <p data-aos="fade-up" className="text-xs text-gray-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Repudiandae, veniam eveniet hic ipsam harum velit corrupti officiis.
             Repellat accusantium voluptatum, velit placeat omnis exercitationem
