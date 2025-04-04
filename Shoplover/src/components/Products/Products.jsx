@@ -62,7 +62,6 @@ const Products = () => {
   return (
     <div className="mt-14 mb-12 w-full">
       <div className="container mx-auto w-full px-4">
-        {" "}
         {/* Header section */}
         <div className="text-center mb-10">
           <p data-aos="fade-up" className="text-sm text-orange-500">
@@ -89,11 +88,13 @@ const Products = () => {
                 key={data.id}
                 className="space-y-3 flex flex-col items-center text-center"
               >
-                <img
-                  src={data.img}
-                  alt={data.title}
-                  className="h-[220px] w-[150px] object-cover rounded-md"
-                />
+                <div className="overflow-hidden transition-transform duration-300 transform hover:scale-200">
+                  <img
+                    src={data.img}
+                    alt={data.title}
+                    className="h-[220px] w-[150px] object-cover rounded-md"
+                  />
+                </div>
                 <h1 className="font-semibold">{data.title}</h1>
                 <p className="text-sm text-gray-500">{data.author}</p>
                 <div className="flex items-center gap-1 justify-center">

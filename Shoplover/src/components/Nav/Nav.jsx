@@ -7,9 +7,12 @@ import DarkMode from "./DarkMode";
 const Menu = [
   {
     id: 1,
-    name: "Home",
+    name: "Sale",
     link: "/#",
-    dropdownLinks: [],
+    dropdownLinks: [
+      { id: 1, name: "New Arrivals", link: "/#new" },
+      { id: 2, name: "Best Sellers", link: "/#best" },
+    ],
   },
   {
     id: 2,
