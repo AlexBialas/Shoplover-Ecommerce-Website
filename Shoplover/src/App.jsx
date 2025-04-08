@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Banner from "./components/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 const App = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const App = () => {
       <TopProducts />
       <Banner />
       <Subscribe />
+      <Testimonial />
     </>
   );
 };
