@@ -2,7 +2,6 @@ import React from "react";
 import Logo from "../../assets/Logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping, FaCaretDown } from "react-icons/fa6";
-import DarkMode from "./DarkMode";
 
 const Menu = [
   {
@@ -43,7 +42,7 @@ const Menu = [
   },
   {
     id: 5,
-    name: "Womans Wear",
+    name: "Womens Wear", // Fixed typo here
     link: "/#",
     dropdownLinks: [
       { id: 1, name: "New Arrivals", link: "/#new-womens" },
@@ -54,7 +53,7 @@ const Menu = [
 
 const Nav = () => {
   return (
-    <nav className="shadow-md bg-white dark:bg-gray-900 text-black dark:text-white duration-200 relative z-40">
+    <header className="shadow-md bg-white dark:bg-gray-900 text-black dark:text-white duration-200 relative z-40">
       {/* Upper navbar */}
       <div className="bg-white py-1 sm:py-0">
         <div className="container flex justify-between items-center">
@@ -76,21 +75,16 @@ const Nav = () => {
               <IoMdSearch className="text-gray-500 group-hover:text-orange-500 absolute top-1/2 -translate-y-1/2 right-3" />
             </div>
           </div>
-          {/* Dark mode button and Order button to the right */}
-          <div className="flex items-center gap-4">
-            <DarkMode />
-            <button
-              onClick={() => alert("Ordering not available yet")}
-              className="bg-gradient-to-r from-orange-400 to-orange-700 transition all py-1 px-4 rounded-full duration-200 text-white flex items-center gap-3 group"
-              aria-label="Order"
-            >
-              <span className="group-hover:block hidden transition-all duration-200">
-                {" "}
-                Order{" "}
-              </span>
-              <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
-            </button>
-          </div>
+          <button
+            onClick={() => alert("Ordering not available yet")}
+            className="bg-gradient-to-r from-orange-400 to-orange-700 transition all py-1 px-4 rounded-full duration-200 text-white flex items-center gap-3 group"
+            aria-label="Order"
+          >
+            <span className="group-hover:block hidden transition-all duration-200">
+              Order
+            </span>
+            <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
+          </button>
         </div>
       </div>
       {/* Lower navbar */}
@@ -131,7 +125,7 @@ const Nav = () => {
           ))}
         </ul>
       </div>
-    </nav>
+    </header>
   );
 };
 
